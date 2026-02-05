@@ -31,15 +31,22 @@ noBtn.addEventListener("click", () => {
 
 // YES clicked -> SEND WHATSAPP NOTIFICATION
 yesBtn.addEventListener("click", () => {
-  let nomorWA = "6285866032564"; // GANTI NOMOR KAMU
-  let pesan = encodeURIComponent("Dia menekan YES di website ulang tahunmu 💖🎉");
+  let usernameIG = "namachi_natxyz"; // GANTI USERNAME IG
 
-  window.open(`https://wa.me/${nomorWA}?text=${pesan}`, "_blank");
+  let pesan = "Aku sudah klik YES di website kamu 💖🎉";
 
+  // Buka IG profile kamu
+  window.open(`https://instagram.com/${usernameIG}`, "_blank");
+
+  // Tampilkan pesan di website
   document.body.innerHTML = `
     <div style="text-align:center; font-family:Poppins; color:#ff4d88;">
       <h1>YEAYYY 💖🎉</h1>
-      <p>Makasih yaa! Hari ini jadi makin spesial ✨</p>
+      <p>Makasih yaa! 💕</p>
+      <p><strong>Kirim pesan ini ke IG aku ya:</strong></p>
+      <p style="background:#fff; padding:10px; border-radius:10px;">
+        ${pesan}
+      </p>
     </div>
   `;
 });
